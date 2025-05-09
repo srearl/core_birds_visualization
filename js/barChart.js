@@ -80,7 +80,7 @@ function renderBarChart(species) {
 
 // Initialize the bar chart on page load
 document.addEventListener("DOMContentLoaded", () => {
-  loadCSV("https://gios-data.s3.us-west-2.amazonaws.com/datasets/cap/cleaned_observations.csv", function(data) {
+  loadCSV("assets/cleaned_observations.csv", function(data) {
     globalData = data;
 
     // Populate species dropdown

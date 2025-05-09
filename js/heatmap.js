@@ -150,7 +150,7 @@ function initHeatmap() {
   createMap();
 
   // Load location data first
-  loadCSV("https://gios-data.s3.us-west-2.amazonaws.com/datasets/cap/cleaned_survey_locations.csv", locData => {
+  loadCSV("assets/cleaned_survey_locations.csv", locData => {
     locData.forEach(row => {
       locationMap.set(row.site_code.trim(), {
         lat: parseFloat(row.lat),
@@ -159,7 +159,7 @@ function initHeatmap() {
     });
 
     // Load observation data and render heatmap
-    loadCSV("https://gios-data.s3.us-west-2.amazonaws.com/datasets/cap/cleaned_observations.csv", obsData => {
+    loadCSV("assets/cleaned_observations.csv", obsData => {
       observationData = obsData;
 
       populateHeatmapDropdowns(obsData);
